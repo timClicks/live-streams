@@ -1,0 +1,38 @@
+#  Implementing a Doubly-Linked List in Rust (Three times!) 
+
+This crate contains 3 bins: 
+
+- `rc.rs` (`cargo run --bin rc`) uses reference counting for the forwards and backwards 
+  links. This has some unfortunate issues, like causing a stack overflow when a list is 
+  printed with Debug.
+- `weak_ref.rs` (`cargo run --bin weak`) fixes the stack overflow problem by introducing
+  another type, `std:rc::Weak`.
+- `raw_ptr.rs` (`cargo run --bin ptr`) uses raw pointers, because that's more fun I 
+  guess. This is the implementation I spent the most time discussing the in live stream,
+  mostly because it's the most fun.
+
+Enjoy!
+
+
+## Video description
+
+<https://youtube.com/live/C5BiKWvGYw8>
+
+> Join Tim McNamara (timClicks) as we dive into implementing a doubly-linked 
+> list in Rust! This live stream is perfect for Rust enthusiasts who want to 
+> learn more about data structures, memory management, and unsafe code in Rust.
+> 
+> During this live stream, we cover:
+> 
+> - The basics of doubly-linked lists
+> - v1: a doubly-linked list in Rust using raw pointers and unsafe blocks
+> - v2: a doubly-linked list in Rust using reference counting and smart pointers
+> - v3: a doubly-linked list in Rust using "weak" references
+> - Answering your questions and discussing Rust best practices
+> 
+> Make sure to grab your favorite beverage, sit back, and enjoy the learning
+> experience. Don't forget to bring your questions, and let's have a great time
+> exploring Rust together!
+
+Note: If you've come here from the video, you'll know that I ran out of time.
+
